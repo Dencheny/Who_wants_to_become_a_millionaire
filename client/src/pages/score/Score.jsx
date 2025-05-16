@@ -1,17 +1,40 @@
 import './score.css';
 
-export default function Score() {
+export default function Score({ answers }) {
+  answers = [
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'wrong', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'correct', answer: 'jjjdjkdfjj' },
+    { status: 'pending' },
+  ];
+
   return (
-    <div className="score-container">
-      <div className="question-box">
-        <h2>Сколько будет 2 + 2?</h2>
+    <>
+      <div className="answer-container">
+        {answers.map((item, index) => (
+          <div
+            key={index}
+            className={`answer-item ${
+              item.status === 'correct'
+                ? 'correct'
+                : item.status === 'wrong'
+                ? 'wrong'
+                : 'pending'
+            }`}
+          >
+            <span className="question-number">Вопрос {index + 1}:</span>
+            <span className="answer-text">{item.answer}</span>
+          </div>
+        ))}
       </div>
-      <div className="answers-grid">
-        <button className="answer">A: 3</button>
-        <button className="answer">B: 4</button>
-        <button className="answer">C: 5</button>
-        <button className="answer">D: 22</button>
+      <div className='buttons'>
+        <button className='button' >Далее</button>
       </div>
-    </div>
+    </>
   );
 }
