@@ -1,4 +1,4 @@
-const { Answer, Question, Category } = require("../models");
+const { Answer, Question, Category } = require("../../db/models");
 
 class AnswerService {
   async getAllAnswers() {

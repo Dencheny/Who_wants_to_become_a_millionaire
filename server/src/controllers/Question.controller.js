@@ -1,7 +1,6 @@
-const QuestionService = require("../services/questionService");
+const QuestionService = require("../services/Question.service");
 const formatResponse = require("../utils/formatResponse"); // функция форматирования ответа
-const { isValidId } = require("../utils/validators"); // функция проверки валидности id
-const QuestionValidator = require("../validators/questionValidator"); // валидатор для вопросов
+const  isValidId  = require("../utils/isValidId"); // функция проверки валидности id
 
 class QuestionController {
   static async getAllQuestions(req, res) {
