@@ -1,7 +1,7 @@
 import './meme.css';
 
 export default function Meme({ isCorrect }) {
-  isCorrect = true;
+  isCorrect = false;
   const image = isCorrect
     ? '../../../public/memeTrue.jpeg'
     : '../../../public/memeFalse.jpeg'; // путь из public

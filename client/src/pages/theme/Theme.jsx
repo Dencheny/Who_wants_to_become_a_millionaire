@@ -1,6 +1,18 @@
+import { useEffect, useState } from 'react'
 import './theme.css'
+import axios from 'axios'
 
 export default function Theme() {
+
+  const [theme, setTheme] = useState([])
+
+  async function themeAll() {
+    axios.get('http://localhost:3000/api/categories').then((res) => setTheme(res.data.data)).catch((error) => console.log(error))
+  }
+
+  useEffect(() => {
+    themeAll()
+  }, [])
 
   const playSound = () => {
     const audio = new Audio('../../public/theme_sound.mp3')
@@ -13,9 +25,7 @@ export default function Theme() {
         <h1>Выбор темы</h1>
       </div>
       <div className="themeButtons">
-        <button onClick={playSound}>Тема 1</button>
-        <button onClick={playSound}>Тема 2</button>
-        <button onClick={playSound}>Тема 3</button>
+        {theme?.map((obj) => (<button onClick={playSound}>{obj.name}</button>))}
       </div>
     </div>
   );
