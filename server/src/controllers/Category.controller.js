@@ -1,4 +1,4 @@
-const CategoryService = require('../services/CategoryService');
+const CategoryService = require('../services/Category.service');
 const isValidId = require('../utils/isValidId');
 const formatResponse = require('../utils/formatResponse');
 
