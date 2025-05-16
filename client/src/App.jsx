@@ -1,13 +1,10 @@
+import Result from './pages/result/Result';
+import './App.css'
 
-
-
-function App() {
-
+export default function App() {
   return (
     <>
-      <div>App.jsx</div>
+      <Result />
     </>
-  )
+  );
 }
-
-export default App
