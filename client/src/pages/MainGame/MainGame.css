@@ -1,0 +1,55 @@
+body {
+  background: url('../../public/geme.jpg') no-repeat;
+  height: 1080px;
+  width: 1920px;
+  background-size: cover;
+  display: flex;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 1080px;
+  width: 1920px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+
+.question{
+    color:rgb(0, 65, 122);
+    margin-bottom: 0px;
+    font-size: 30px;
+    margin-bottom: 80px;
+    margin-right: 0px;
+}
+
+.answers {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: rgb(11, 63, 248);
+    font-size: 30px;
+    gap:70px;
+}
+
+.ab{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    gap: 140px;
+}
+
+.cd{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 140px;
+}
+
+
